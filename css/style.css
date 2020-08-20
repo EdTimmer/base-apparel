@@ -154,7 +154,8 @@ p {
   .text__input:invalid:not(:focus):not(:placeholder-shown) ~ .requirements {
     color: #ce9797;
     opacity: 1;
-    padding: 2rem; }
+    transform: translateY(1rem);
+    margin-left: 3rem; }
   .text__input:invalid:not(:focus):not(:placeholder-shown) ~ .error-icon {
     height: 3rem;
     opacity: 1;

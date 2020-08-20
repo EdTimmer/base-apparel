@@ -89,10 +89,12 @@
     }
 
     &:invalid:not(:focus):not(:placeholder-shown) {
+
       & ~ .requirements {
         color: $color-desaturated-red;
         opacity: 1;
-        padding: 2rem;
+        transform: translateY(1rem);
+        margin-left: 3rem;
       }
 
       & ~ .error-icon {
