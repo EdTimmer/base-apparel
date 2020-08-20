@@ -1,0 +1,193 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* screen size: <= 1200px; html font-size: 9px */
+  /* screen size: <= 900px; html font-size: 8px */ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem; }
+
+.container {
+  background-color: #fff;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(60rem, 110rem);
+  align-content: center;
+  justify-content: center; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  text-transform: uppercase; }
+  .heading-1--thin {
+    font-weight: 300;
+    color: #ce9797; }
+  .heading-1--thick {
+    font-weight: 600;
+    color: #413a3a; }
+
+p {
+  color: #ce9797; }
+
+.card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(40rem, 60rem) minmax(30rem, 50rem); }
+  @media only screen and (max-width: 56.25em) {
+    .card {
+      grid-template-columns: min-content;
+      grid-template-rows: min-content; } }
+  .card__text {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: round;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5rem 10rem;
+    display: grid;
+    grid-template-columns: minmax(50%, 1fr);
+    grid-template-rows: min-content 1fr repeat(3, min-content) 1fr;
+    grid-gap: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .card__text {
+        grid-template-rows: min-content;
+        grid-gap: 2rem;
+        padding: .5rem; } }
+  .card__img {
+    background-image: url(../images/hero-desktop.jpg);
+    width: 100%;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden; }
+    @media only screen and (max-width: 56.25em) {
+      .card__img {
+        display: none; } }
+
+.text__logo {
+  height: 2.5rem;
+  grid-row: 1 / 2; }
+
+.text__logo-img {
+  height: 100%;
+  display: block; }
+
+.text__img-small {
+  height: 0; }
+  @media only screen and (max-width: 56.25em) {
+    .text__img-small {
+      background-image: url(../images/hero-mobile.jpg);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 30rem;
+      max-height: 60rem;
+      display: block;
+      grid-row: 2 / 3; } }
+
+.text__heading {
+  grid-row: 3 / 4;
+  letter-spacing: 1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .text__heading {
+      justify-self: center; } }
+
+.text__paragraph {
+  grid-row: 4/ 5;
+  line-height: 1.5;
+  font-weight: 300; }
+  @media only screen and (max-width: 56.25em) {
+    .text__paragraph {
+      justify-self: center;
+      text-align: center;
+      width: 70%; } }
+
+.text__input-container {
+  grid-row: 5 / 6;
+  align-content: center;
+  display: grid;
+  grid-template-rows: repeat(2, min-content); }
+  @media only screen and (max-width: 56.25em) {
+    .text__input-container {
+      justify-items: center; } }
+
+.text__input {
+  border: 1px solid #ce9797;
+  border-radius: 100px;
+  width: 35rem;
+  height: 4rem;
+  padding-left: 2rem;
+  background-color: #fff;
+  grid-row: 1 / 2; }
+  .text__input::placeholder {
+    font-size: 1.5rem;
+    color: #ce9797;
+    filter: opacity(50%); }
+  .text__input:focus {
+    outline: none;
+    border: 1px solid #f96262;
+    color: black; }
+  .text__input:invalid:not(:focus):not(:placeholder-shown) ~ .requirements {
+    color: #ce9797;
+    opacity: 1;
+    padding: 2rem; }
+  .text__input:invalid:not(:focus):not(:placeholder-shown) ~ .error-icon {
+    height: 3rem;
+    opacity: 1;
+    transform: translateX(-16rem);
+    padding-top: 1rem; }
+
+.text__btn {
+  height: 4rem;
+  width: 7rem;
+  border: none;
+  border-radius: 100px;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  transform: translateX(-5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.5rem 1rem rgba(238, 140, 140, 0.5);
+  cursor: pointer;
+  grid-row: 1 / 2;
+  justify-self: end; }
+  .text__btn:hover {
+    background-image: linear-gradient(135deg, #fdeded, #f4b8b8);
+    box-shadow: 0 1rem 2rem rgba(238, 140, 140, 0.5); }
+
+.requirements {
+  grid-row: 2 / 3;
+  opacity: 0;
+  height: 0; }
+
+.arrow {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 1rem; }
+
+.arrow-img {
+  height: 100%;
+  display: block; }
+
+.error-icon {
+  grid-row: 1 / 2;
+  opacity: 0;
+  height: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .error-icon {
+      display: none; } }
+
+.error-img {
+  height: 2rem; }

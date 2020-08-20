@@ -1,0 +1,60 @@
+$color-desaturated-red: hsl(0, 36%, 70%);
+$color-soft-red: hsl(0, 93%, 68%);
+$color-dark-grayish-red: hsl(0, 6%, 24%);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  /* screen size: <= 1200px; html font-size: 9px */
+  @media only screen and (max-width: 75em) {
+    font-size: 56.25%; 
+  }
+
+  /* screen size: <= 900px; html font-size: 8px */
+  @media only screen and (max-width: 56.25em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+.container {
+  background-color: #fff;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: minmax(60rem, 110rem);
+  align-content: center;
+  justify-content: center;  
+}
+
+.heading-1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+
+  &--thin {
+    font-weight: 300;
+    color: $color-desaturated-red;
+  }
+
+  &--thick {
+    font-weight: 600;
+    color: $color-dark-grayish-red;
+  }
+}
+
+p {
+  color: $color-desaturated-red;
+}
+
