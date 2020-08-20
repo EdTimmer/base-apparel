@@ -34,9 +34,15 @@ body {
   .heading-1--thin {
     font-weight: 300;
     color: #ce9797; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-1--thin {
+        text-align: center; } }
   .heading-1--thick {
     font-weight: 600;
     color: #413a3a; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-1--thick {
+        text-align: center; } }
 
 p {
   color: #ce9797; }
@@ -44,7 +50,8 @@ p {
 .card {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(40rem, 60rem) minmax(30rem, 50rem); }
+  grid-template-columns: minmax(40rem, 60rem) minmax(30rem, 50rem);
+  justify-content: center; }
   @media only screen and (max-width: 56.25em) {
     .card {
       grid-template-columns: min-content;
@@ -63,7 +70,7 @@ p {
       .card__text {
         grid-template-rows: min-content;
         grid-gap: 2rem;
-        padding: .5rem; } }
+        padding: 0; } }
   .card__img {
     background-image: url(../images/hero-desktop.jpg);
     width: 100%;
@@ -78,6 +85,9 @@ p {
 .text__logo {
   height: 2.5rem;
   grid-row: 1 / 2; }
+  @media only screen and (max-width: 56.25em) {
+    .text__logo {
+      margin: 3rem 0 0 3rem; } }
 
 .text__logo-img {
   height: 100%;
@@ -121,7 +131,9 @@ p {
   grid-template-rows: repeat(2, min-content); }
   @media only screen and (max-width: 56.25em) {
     .text__input-container {
-      justify-items: center; } }
+      justify-self: center;
+      justify-items: center;
+      margin-left: 5rem; } }
 
 .text__input {
   border: 1px solid #ce9797;
